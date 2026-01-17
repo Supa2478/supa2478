@@ -53,27 +53,4 @@
     </footer>
 
 </body>
-<script>
-    const hero = document.getElementById("hero");
-
-    const images = [
-        "assets/img/banner/01.jpg",
-        "assets/img/banner/02.jpg",
-        "assets/img/banner/03.jpg"
-    ];
-
-    let index = 0;
-
-    function changeHeroImage() {
-        hero.style.backgroundImage = `url('${images[index]}')`;
-        index = (index + 1) % images.length;
-    }
-
-    // เริ่มต้น
-    changeHeroImage();
-
-    // เปลี่ยนทุก 10 วินาที
-    setInterval(changeHeroImage, 10000);
-</script>
-
 </html>
