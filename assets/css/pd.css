@@ -1,0 +1,212 @@
+.product-category {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.product-category button {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding-bottom: 6px;
+}
+
+.product-category button.active {
+    border-bottom: 3px solid #8b6f4e;
+    font-weight: bold;
+}
+
+/* ===== Layout ===== */
+.product-layout {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1100px) auto;
+    gap: 30px;
+}
+
+.product-filter {
+    width: 260px;
+    font-size: 1.2rem;
+    grid-column: 1;
+    justify-self: end;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    width: 100%;
+    grid-column: 2;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ===== Filter Item ===== */
+.filter-item {
+    display: block;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #f4f4f4;
+    text-align: center;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.filter-item:hover {
+    background: #e6e6e6;
+}
+
+.filter-item.active {
+    background: #8b6f4e;
+    color: #fff;
+}
+
+/* ===== Product Detail ===== */
+.product-detail {
+    display: flex;
+    gap: 40px;
+}
+
+/* ⭐⭐ จุดที่แก้จริง ⭐⭐ */
+.product-gallery {
+    width: 960px;
+    height: 600px;
+    margin-left: 40px;
+    padding: 10px;
+    background: #fff;
+    border: 2px solid #a61b1b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    position: relative; /* ⭐ ให้ลูกศรอ้างอิงตำแหน่ง */
+}
+
+/* ลูกศร */
+.product-gallery .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 44px;
+    text-align: center;
+}
+
+.product-gallery .nav.prev {
+    left: 10px;
+}
+
+.product-gallery .nav.next {
+    right: 10px;
+}
+
+.product-gallery .nav:hover {
+    background: rgba(0,0,0,0.6);
+}
+
+/* รูปใหญ่ */
+.product-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;         /* เห็นรูปครบทุกแนว */
+    border-radius: 8px;
+}
+
+
+.thumbs-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+/* ตัวที่เลื่อนจริง */
+#thumbs {
+    display: flex;
+    gap: 10px;
+    margin: auto;
+    align-items: center;
+
+    max-width: 520px;            /* 5 รูป × 100px + gap */
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding-bottom: 5px;
+}
+
+
+/* ซ่อน scrollbar บนบาง browser (optional) */
+#thumbs::-webkit-scrollbar {
+    height: 8px;
+}
+
+#thumbs::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+#thumbs img {
+    flex: 0 0 auto;
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform .15s ease, opacity .15s ease;
+}
+
+#thumbs img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* (optional) รูปที่ถูกเลือก */
+#thumbs img.active {
+    outline: 2px solid #8b6f4e;
+}
+
+
+.product-info {
+    width: 50%;
+}
+
+/* ===== Back Button ===== */
+.back-btn {
+    display: inline-block;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #8b6f4e;
+    font-size: 1.4rem;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+    color: #8b1e1e;
+}
+
+/* ===== Product Card (หน้า Products) ===== */
+.product-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* กรอบรูปสินค้า */
+.product-card img {
+    width: 350px;          /* ล็อกกว้าง */
+    height: 243px;         /* ล็อกสูง */
+    object-fit: cover;     /* เต็มกรอบ ตัดส่วนเกิน */
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;        /* กึ่งกลางในการ์ด */
+}

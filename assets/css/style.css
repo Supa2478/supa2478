@@ -1,0 +1,299 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General */
+body {
+    font-family: 'Kanit', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #FAF6F6;
+}
+
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background: #8b1e1e; /*สีด้านบนเมนู */
+    padding: 2px;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    padding-top: 5px;
+    width: 220px;
+    justify-content: center;
+}
+
+nav {
+    float: right;
+    margin-top: 15px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+
+}
+
+.nav-list li {
+    position: relative;
+    display: flex;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 0px 10px;
+    margin-top: -15px;
+}
+
+.nav-list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: #ffdede;
+    /* เส้นสีทองอ่อน */
+    transition: width 0.3s ease;
+}
+
+/* Hover effect */
+.nav-list a:hover {
+    color: #ffdede;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+/* Hero */
+#hero {
+    position: relative;
+    min-height: 30vh;          /* จอใหญ่ */
+    height: 30vh;
+    max-height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: background-image 1.5s ease-in-out, opacity 1.2s ease;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+#hero1 {
+    position: relative;
+    min-height: 30vh;          /* จอใหญ่ */
+    height: 30vh;
+    max-height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: background-image 1.5s ease-in-out, opacity 1.2s ease;
+    overflow: hidden;
+}
+
+#hero1 h1 {
+    font-size: 3rem;
+    margin-left: 20px;
+}
+
+#hero1 p {
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.btn {
+    padding: 10px 25px;
+    background: #b58a6f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* Products */
+#products {
+    padding: 40px 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    margin-top: 10px;
+    color: #444;
+}
+
+/* About */
+#about {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.about-content img {
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 0;
+}
+
+.contact-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-info h2 {
+    color: #004976;
+    font-size: 3.5rem;
+
+}
+
+.contact-info a {
+    color: #b58a6f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    width: 150px;
+    padding: 10px;
+    background: #b58a6f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* ซ้าย */
+.contact-left {
+    flex: 1;
+}
+
+/* ขวา */
+.contact-right {
+    flex: 1;
+}
+
+.contact-right iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border: 0;
+    border-radius: 8px;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #222;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    .contact-right iframe {
+        min-height: 300px;
+    }
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+nav a {
+    font-weight: 500;
+}
+
+p, li, span {
+    font-weight: 400;
+    font-size: larger;
+}
+
