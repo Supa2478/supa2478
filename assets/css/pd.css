@@ -70,6 +70,7 @@
 .product-detail {
     display: flex;
     gap: 40px;
+    width: 90%;
 }
 
 /* ⭐⭐ จุดที่แก้จริง ⭐⭐ */
@@ -209,4 +210,10 @@
     border-radius: 8px;
     display: block;
     margin: 0 auto;        /* กึ่งกลางในการ์ด */
+}
+.product-info h2 + p {
+  margin-left: 2rem;
+}
+.product-info h3 + p {
+  margin-left: 2rem;
 }
